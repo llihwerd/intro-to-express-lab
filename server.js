@@ -1,12 +1,13 @@
 // import modules
 
-import express from 'express'
+import express from "express"
 
 // create Express app
 
 const app = express()
 
-// configure the app (app.set)
+// Configure the app (app.set)
+app.set('view engine', 'ejs')
 
 
 
@@ -21,7 +22,7 @@ app.get('/', function(req, res) {
 })
 
 app.get('/home', function(req, res) {
-  res.send('<h1>Home Page</h1>')
+  res.render('home')
 })
 
 
