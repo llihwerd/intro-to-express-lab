@@ -1,7 +1,11 @@
 // import modules
 
 import express from 'express'
-import { pokemon } from './data/pokemon-data.js'
+
+
+
+import { pokemon } from './data/pokemon-data.mjs'
+
 
 
 // create Express app
@@ -32,6 +36,10 @@ app.get('/pokemon', function(req, res) {
   res.render('pokemon/index', {
     pokemon: pokemon
   })
+})
+
+app.get('/', function(req, res) {
+  res.redirect('/home')
 })
 
 // tell the app to listen on port 3000

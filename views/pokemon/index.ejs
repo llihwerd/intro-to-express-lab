@@ -8,11 +8,11 @@
 <body>
   <h1>Pokemon</h1>
   <ul>
-    <% pokemons.forEach(pokemon => { %>
+    <% pokemon.forEach(pokemon => { %>
       <li>
 				<%= pokemon.name %> 
 				- 
-				<%= todo.starter ? 'Choose me!' : 'You have to wait!' %>
+				<%= pokemon.starter ? 'Choose me!' : 'You have to wait!' %>
 			</li>
     <% }) %>
   </ul>
